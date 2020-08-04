@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>=
+	</head>
+	<body ng-app="myApp">
+<!-- 		<div ng-app="" ng-init="firstName='John'">
+			<p>请在输入框中输入:</p>
+			<p>姓名：<input type="text" ng-model="firstName"></p>
+			<p>你输入的值为：{{firstName}}</p>
+			<span ng-bind="firstName"></span>
+		</div> -->
+		
+<!-- 		<div ng-app="">
+			<h2>价格计算器</h2>
+			数量：<input type="number" ng-model="quantity"/><br>
+			价格：<input type="number" ng-model="price"/><br>
+			
+			<p>{{quantity * price}}</p>
+		</div> -->
+		
+<!-- 		<div ng-app="" ng-init="names=['刘备','关羽','张飞']">
+			<p>使用ng-repeat 来循环数组</p>
+			<ul>
+				<li ng-repeat="x in names"> 
+					{{x}}
+				</li>
+			</ul>
+		</div> -->
+		
+		
+<!-- 		<div ng-app="" ng-init="names=[
+		{name:'Jani',country:'Norway'},
+		{name:'Hege',country:'Sweden'},
+		{name:'Kai',country:'Denmark'}]">
+		
+		<p>循环对象</p>
+		<ul>
+			<li ng-repeat="x in names">
+				{{x.name + ':' +x.country}}
+			</li>
+		</ul>
+		</div> -->
+<!-- 		<runoob-directive></runoob-directive>
+ -->		
+ 
+<!-- 		<div runoob-directive></div>
+ -->		
+ 
+ 
+ 
+<!-- 		<script>
+			var app = angular.module("myApp",[]);
+			app.directive("runoobDirective",function(){
+				return {
+					template:"<h1>薛巍自定义的指令！</h1>"
+				};
+			});
+			
+			// var app = angular.module("myApp",[]);
+			// app.directive("runoobDirective", function() {
+			//     return {
+			//         template : "<h1>自定义指令!</h1>"
+			//     };
+			// });
+		</script> -->
+		
+		<runoob-directive></runoob-directive>
+		<div runoob-directive></div>
+		
+		<script>
+			var app = angular.module("myApp",[]);
+			app.directive("runoobDirective",function(){
+				return {
+					restrict:"A",
+					template:"<h1>自定义的标签</h1>"
+				}
+			})
+		</script>
+		
+		
+	</body>
+</html>

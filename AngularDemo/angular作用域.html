@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+		
+		
+<!-- 		<div ng-app="myApp" ng-controller="myCtrl">
+			<h1>{{carname}}</h1>
+		</div>
+		
+		<script>
+			var app = angular.module('myApp',[]);
+			app.controller('myCtrl',function($scope){
+				$scope.carname='刘备';
+			})
+		</script> -->
+		
+		
+<!-- 		<div ng-app="myApp" ng-controller="myCtrl"> 
+			<input ng-model="name"/>
+			<h1>{{greeting}}</h1>
+			<button ng-click='sayHello()'>点击</button>
+		</div>
+		
+		<script>
+			var app = angular.module('myApp',[]);
+			app.controller('myCtrl',function($scope){
+				$scope.name="Runoob";
+				$scope.sayHello = function(){
+					$scope.greeting = 'Hello'+$scope.name+'!';
+				}
+			})
+		</script> -->
+		
+<!-- 		<div ng-app="myApp" ng-controller="myCtrl">
+			<ul>
+				<li ng-repeat="x in names">
+					{{x}}
+				</li>
+			</ul>
+		</div>
+		
+		<script>
+			var app = angular.module('myApp',[]);
+			
+			app.controller('myCtrl',function($scope){
+				$scope.names=['张飞','赵云','黄忠']
+			})
+		</script> -->
+		
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<h1>姓氏为 {{lastname}} 家族成员:</h1>
+		
+		
+		<ul>
+			<li ng-repeat="x in names">
+				{{x}} {{lastname}}
+			</li>
+		</ul>
+		
+		</div>
+		
+		<script>
+			var app = angular.module('myApp',[]);
+			app.controller('myCtrl',function($scope){
+				$scope.names=['刘备','关羽','赵云']
+				$scope.lastname = "蜀汉"
+			})
+		</script>
+		
+	</body>
+</html>

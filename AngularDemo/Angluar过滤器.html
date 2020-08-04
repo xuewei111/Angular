@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="//cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+
+    <!-- <div ng-app="myApp" ng-controller="personCtrl">
+        <p>
+            姓名为: {{lastName | lowercase}}
+        </p>
+    </div>
+
+    <script>
+        var app = angular.module('myApp',[])
+        app.controller('personCtrl',function($scope){
+            $scope.lastName = 'xuewei'
+        })
+    </script> -->
+
+    <!-- <div ng-app="myApp" ng-controller="costCtrl">
+        数量：<input type="number" ng-model="quantity">
+        价格：<input type="number" ng-model="price">
+
+        <p>
+            {{(quantity * price) | currency}}
+        </p>
+    </div>
+
+    <script>
+        angular.module('myApp',[]).controller('costCtrl',function($scope){
+            $scope.quantity = 1;
+            $scope.price = 9.99
+        })
+    </script> -->
+    
+    <!-- <div ng-app="myApp" ng-controller="namesCtrl">
+
+        <p>
+            循环对象
+        </p>
+
+        <ul>
+            <li ng-repeat="x in names | orderBy:'zi'">
+                {{x.name+ " 字 "+x.zi}}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        angular.module('myApp',[]).controller('namesCtrl',function($scope){
+            $scope.names = [
+                {name:'刘备',zi:'玄德'},
+                {name:'关羽',zi:'云长'},
+                {name:'张飞',zi:'翼德'}
+            ]
+        })
+    </script> -->
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+        姓名：{{msg | reverse}}
+    </div>
+
+    <script>
+        var app = angular.module('myApp',[])
+        app.controller('myCtrl',function($scope){
+            $scope.msg = "Runoob";
+        })
+
+        app.filter('reverse',function(){
+            return function(text){
+                return text.split("").reverse().join("")
+            }
+        })
+    </script>
+</body>
+</html>

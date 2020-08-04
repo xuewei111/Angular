@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        姓: <input type="text" ng-model="firstName"><br>
+        名: <input type="text" ng-model="lastName"><br>
+
+        姓名: {{firstName+ "" +lastName}}
+    </div>
+    <br>
+    
+
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+            $scope.firstName='刘'
+            $scope.lastName="备"
+        })
+    </script> -->
+
+    <!-- <div ng-app="myApp" ng-controller="personCtrl"> 
+        姓: <input type="text" ng-model="firstName">
+        名: <input type="text" ng-model="lastName">
+
+        {{fullName()}}
+    </div> 
+
+    <script>
+        var app = angular.module('myApp',[])
+        app.controller('personCtrl',function($scope){
+            $scope.firstName ='刘';
+            $scope.lastName='备';
+            $scope.fullName = function(){
+                return $scope.firstName+ " " + $scope.lastName;
+            }
+        })
+    </script> -->
+
+    <div ng-app="myApp" ng-controller="namesCtrl">
+        <ul>
+            <li ng-repeat="x in names">
+                {{x.name+','+x.names}}
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/控制器.js">
+
+    </script>
+</body>
+</html>
