@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.staticfile.org/angular.js/1.6.3/angular.min.js"></script>
+
+    <!-- <div ng-app="myApp" ng-controller="siteCtrl"> 
+
+        <ul>
+          <li ng-repeat="x in names">
+            {{ x.Name + ', ' + x.Country }}
+          </li>
+        </ul>
+        
+    </div>
+
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('siteCtrl',function($scope,$http){
+            $http({
+                method:'GET',
+                url:'https://www.runoob.com/try/angularjs/data/sites.php'
+            }).then(function successCallback(response){
+                $scope.names = response.data.sites;
+            },function errorCallback(response){
+                console.log("错误")
+            })
+        })
+    </script> -->
+
+
+    <div ng-app="myApp" ng-controller="steCtrl">
+        <ul>
+            <li ng-repeat = "x in names">
+                {{x.Name+ "," +x.Country}}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var app = angular.module('myApp',[])
+        app.controller('steCtrl',function($scope,$http){
+            $http.get("https://www.runoob.com/try/angularjs/data/sites.php")
+            .then(function(response){console.log(response);$scope.names = response.data.sites})
+        })
+    </script>
+</body>
+</html>
